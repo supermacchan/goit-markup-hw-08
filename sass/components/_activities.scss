@@ -1,0 +1,70 @@
+.activities {
+    @extend %section;
+    padding-top: 0;
+}
+
+.activities__container {
+    @extend %container;
+}
+
+.activities__title {
+    @extend %title;
+}
+
+.activities__list {
+    @extend %list;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.activities__item {
+    width: calc((100% - 60px) / 3);
+
+    &:not(:last-child) {
+            margin-right: 30px;
+        }
+}
+
+.activities__card {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        
+        content: '';
+        
+        width: 100%;
+        height: 70px;
+        
+        background: rgba(47, 48, 58, 0.8);
+    }
+}
+
+.activities__image {
+    display: block;
+    max-width: 100%;
+}
+
+.activities__description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    
+    margin: 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    
+    width: 100%;
+    
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    text-transform: uppercase;
+    color: $dark-bg-text;
+}

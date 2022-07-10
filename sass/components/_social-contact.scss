@@ -1,0 +1,42 @@
+.social-contact {
+    @extend %list;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0;
+}
+
+.social-contact__item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social-contact__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+
+    text-decoration: none;
+    color: $icon-color;
+    background-color: $main-bg-color;
+
+    transition: background-color 250ms $time-function,
+        color 250ms $time-function;
+
+    &:hover,
+    &:focus {
+        background-color: $main-active-color;
+        color: $dark-bg-text;
+        outline: transparent;
+    }
+}
+
+.social-contact__icon {
+    fill: currentColor;
+}

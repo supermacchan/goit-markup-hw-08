@@ -1,0 +1,67 @@
+.filters {
+    @extend %section;
+}
+
+.filters__container {
+    @extend %container;
+}
+
+.filters__title {
+    @include visuallyHidden();
+}
+
+.filters__list {
+    @extend %list;
+
+    display: flex;
+    justify-content: center;
+    
+    margin-top: 0;
+    margin-bottom: 50px;
+    padding: 0;
+}
+
+.filters__item:not(:last-child) {
+    margin-right: 8px;
+}
+
+.filters__button {
+    background-color: $secondary-bg-color;
+    color: $text-heading-color;
+    cursor: pointer;
+
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 22px;
+    padding-right: 22px;
+
+    border: 0;
+    border-radius: 4px;
+
+
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+
+    transition: background-color 250ms $time-function,
+    color 250ms $time-function,
+    box-shadow 250ms $time-function;
+
+    &:hover, &:focus {
+        background-color: $main-active-color;
+        color: $dark-bg-text;
+        outline: transparent;
+        
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+}
+
+.filters__button--active {
+    background-color: $main-active-color;
+        color: $dark-bg-text;
+        outline: transparent;
+    
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}

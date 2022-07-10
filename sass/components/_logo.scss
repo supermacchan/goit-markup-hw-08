@@ -1,0 +1,19 @@
+.logo {
+    font-family: $fontLogo;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+}
+
+.logo__accent-text {
+    color: $main-active-color;
+}
+
+.logo__main-text {
+    color: $text-heading-color;
+}
+
+.logo__main-text--inverse {
+    color: $dark-bg-text;
+}
