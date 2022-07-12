@@ -33,7 +33,7 @@
     margin-left: auto;
     z-index: 4;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
         display: none;
     }
 }
@@ -80,7 +80,7 @@
     margin: 0 0 0 88px;
     padding: 0;
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
         margin: 0 0 0 93px;
     }
 }
@@ -136,7 +136,7 @@
             display: none;
         }
     
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
         display: flex;
     }
 }
@@ -144,7 +144,7 @@
 .header-contact__item:not(:last-child) {
     margin-bottom: 10px;
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
         margin-right: 50px;
         margin-bottom: 0;
     }
@@ -169,7 +169,7 @@
         color: $main-active-color;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
         padding-top: 32px;
         padding-bottom: 32px;
     }

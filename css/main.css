@@ -20,8 +20,8 @@
 }
 
 .filters, .clients, .team, .activities, .features {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .body {
@@ -461,6 +461,13 @@
   background-color: #188CE8;
 }
 
+@media screen and (min-width: 1200px) {
+  .features {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 .features__title {
   position: absolute;
   width: 1px;
@@ -476,18 +483,41 @@
 }
 
 .features__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin: 0;
   padding: 0;
 }
-
-.features__item {
-  width: calc((100% - 120px) / 4);
+@media screen and (min-width: 768px) {
+  .features__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
+
 .features__item:not(:last-child) {
-  margin-right: 30px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .features__item {
+    width: calc((100% - 30px) / 2);
+  }
+  .features__item:nth-child(odd) {
+    margin-right: 30px;
+  }
+  .features__item:nth-last-child(-n+2) {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features__item {
+    width: calc((100% - 120px) / 4);
+    margin-bottom: 0;
+  }
+  .features__item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .features__icon {
@@ -513,6 +543,11 @@
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+}
+@media screen and (max-width: 767px) {
+  .features__name {
+    text-align: center;
+  }
 }
 
 .features__text {

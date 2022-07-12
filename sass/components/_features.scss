@@ -1,5 +1,10 @@
 .features {
     @extend %section;
+
+    @media screen and (min-width: $desktop) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
 
 .features__container {
@@ -13,18 +18,40 @@
 
 .features__list {
     @extend %list;
-
-    display: flex;
     margin: 0;
     padding: 0;
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 .features__item {
-    width: calc((100% - 120px) / 4);
+    &:not(:last-child){
+        margin-bottom: 30px;
+    }
+    
+    @media screen and (min-width: $tablet) {
+        width: calc((100% - 30px) / 2);
 
-    &:not(:last-child) {
+        &:nth-child(odd) {
             margin-right: 30px;
         }
+
+        &:nth-last-child(-n + 2) {
+            margin-bottom: 0;
+        }
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: calc((100% - 120px) / 4);
+        margin-bottom: 0;
+
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
 }
 
 .features__icon {
@@ -48,6 +75,10 @@
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
+
+    @media screen and (max-width: 767px) {
+        text-align: center;
+    }
 }
 
 .features__text {
