@@ -1,5 +1,10 @@
 .clients {
     @extend %section;
+
+    @media screen and (min-width: $desktop) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
 
 .clients__container {
@@ -8,24 +13,34 @@
 
 .clients__title {
     @extend %title;
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 50px;
+        font-size: 36px;
+    }
 }
 
 .clients__list {
     @extend %list;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
     margin: 0;
     padding: 0;
+    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .clients__item {
-    width: calc((100% - 150px) / 6);
+    width: calc((100% - 30px) / 2);
 
-    &:not(:last-child) {
-            margin-right: 30px;
-        }
+    @media screen and (min-width: $tablet) {
+        width: calc((100% - 60px) / 3);
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: calc((100% - 150px) / 6);
+    }
 }
 
 .clients__link {
