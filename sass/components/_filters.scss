@@ -1,5 +1,14 @@
 .filters {
     @extend %section;
+
+    @media screen and (min-width: $tablet) {
+        padding-top: 66px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
 
 .filters__container {
@@ -14,15 +23,21 @@
     @extend %list;
 
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     padding: 0;
-}
+    gap: 15px 8px;
 
-.filters__item:not(:last-child) {
-    margin-right: 8px;
+    @media screen and (min-width: $tablet) {
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+        @media screen and (min-width: $desktop) {
+            margin-bottom: 50px;
+        }
 }
 
 .filters__button {
