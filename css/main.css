@@ -34,6 +34,9 @@
   font-style: normal;
   letter-spacing: 0.03em;
 }
+.body.modal-open {
+  overflow: hidden;
+}
 
 .logo {
   font-family: "Raleway", sans-serif;
@@ -1113,6 +1116,7 @@
   left: 0;
   top: 0;
   z-index: 7;
+  overflow: scroll;
   visibility: visible;
   opacity: 1;
   width: 100%;

@@ -9,4 +9,8 @@
     font-family: $fontPrimary;
     font-style: normal;
     letter-spacing: 0.03em;
+
+    &.modal-open {
+        overflow: hidden;
+    }
 }
