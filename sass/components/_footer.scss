@@ -7,7 +7,30 @@
 
 .footer__container {
     @extend %container;
-    display: flex;
+    text-align: center;
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        text-align: start;
+    } 
+}
+
+.footer__tablet {
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.footer__contacts {
+    @media screen and (min-width: $tablet) {
+        margin-left: auto;
+        margin-right: 165px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin: 0;
+    }
 }
 
 .footer-contacts {
@@ -18,7 +41,11 @@
 }
 
 .footer-contacts__item:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 9px;
+    }
 }
 
 .footer-contacts__address {
@@ -50,13 +77,21 @@
 }
 
 .join {
-    margin-left: 70px;
+    margin-top: 60px;
+
+    @media screen and (min-width: $tablet) {
+        margin-right: auto;
+        margin-top: 5px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin: 0 0 0 70px;
+    }
 }
 
 .join__callout {
     margin-bottom: 20px;
     margin-top: 0;
-    padding-top: 12px;
     
     font-weight: 700;
     font-size: 14px;
@@ -64,11 +99,16 @@
     text-transform: uppercase;
     
     color: $dark-bg-text;
+
+    @media screen and (min-width: $desktop) {
+        padding-top: 12px;
+    }
 }
 
 .footer-social {
     @extend %list;
     display: flex;
+    justify-content: center;
     margin: 0;
     padding: 0;
 }
@@ -104,13 +144,16 @@
 }
 
 .subscription {
-    margin-left: auto;
+    margin-top: 60px;
+
+    @media screen and (min-width: $desktop) {
+        margin: 0 0 0 auto;
+    }
 }
 
 .subscription__callout {
     margin-bottom: 20px;
     margin-top: 0;
-    padding-top: 12px;
     
     font-weight: 700;
     font-size: 14px;
@@ -118,16 +161,23 @@
     text-transform: uppercase;
     
     color: $dark-bg-text;
+
+    @media screen and (min-width: $desktop) {
+        padding-top: 12px;
+    }
 }
 
 .subscription__form {
-    display: flex;
+    @media screen and (min-width: $desktop) {
+        display: flex;
+    }
 }
 
 .subscription__input {
-    width: 358px;
+    max-width: 450px;
+    width: 100%;
     padding: 15px 16px;
-    margin-right: 12px;
+    margin-bottom: 20px;
     
     color: $dark-bg-text;
     background-color: $dark-bg-color;
@@ -147,6 +197,11 @@
         
         color: $dark-bg-contacts;
     }
+
+    @media screen and (min-width: $desktop) {
+        width: 358px;
+        margin-right: 12px;
+    }
 }
 
 .subscription__button {
@@ -159,6 +214,8 @@
     width: 200px;
     height: 50px;
     padding: 0;
+    margin-left: auto;
+    margin-right: auto;
     
     background-color: $main-active-color;
     color: $dark-bg-text;

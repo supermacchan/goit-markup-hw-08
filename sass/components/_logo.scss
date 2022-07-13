@@ -2,8 +2,13 @@
     font-family: $fontLogo;
     text-decoration: none;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
+    font-size: 24px;
+    line-height: 1.16;
+
+    @media screen and (min-width: $desktop) {
+        font-size: 26px;
+        line-height: 1.19;
+    } 
 }
 
 .logo__accent-text {
