@@ -282,6 +282,7 @@
   top: 0;
   left: 0;
   z-index: 2;
+  overflow-y: scroll;
   background-color: #FFFFFF;
   height: 100vh;
   width: 100vw;
@@ -386,6 +387,9 @@
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
+}
+.mobile-social__item:hover .mobile-social__link, .mobile-social__item:focus .mobile-social__link {
+  text-decoration: underline;
 }
 
 .hero {
@@ -1405,6 +1409,11 @@
     padding-right: 11px;
   }
 }
+@media screen and (max-width: 450px) {
+  .policy__agreement {
+    margin-left: 24px;
+  }
+}
 
 .policy__checkbox--empty {
   position: absolute;
@@ -1495,6 +1504,13 @@
   margin-bottom: 40px;
   padding: 0;
   gap: 15px 8px;
+}
+@media screen and (min-width: 624px) and (orientation: landscape) {
+  .filters__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 @media screen and (min-width: 768px) {
   .filters__list {

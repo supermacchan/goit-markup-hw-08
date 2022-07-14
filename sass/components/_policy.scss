@@ -35,6 +35,10 @@
         line-height: 1.71;
         padding-right: 11px;
     }
+
+    @media screen and (max-width: 450px) {
+        margin-left: 24px;
+    }
 }
 
 .policy__checkbox--empty {
