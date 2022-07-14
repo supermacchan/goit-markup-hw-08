@@ -9,6 +9,10 @@
 
 .features__container {
     @extend %container;
+
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+        max-width: $tablet;
+    }
 }
 
 .features__title {
@@ -18,8 +22,12 @@
 
 .features__list {
     @extend %list;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 0;
     padding: 0;
+    gap: 30px;
 
     @media screen and (min-width: $tablet) {
         display: flex;
@@ -28,29 +36,14 @@
 }
 
 .features__item {
-    &:not(:last-child){
-        margin-bottom: 30px;
-    }
+    max-width: 450px;
     
     @media screen and (min-width: $tablet) {
         width: calc((100% - 30px) / 2);
-
-        &:nth-child(odd) {
-            margin-right: 30px;
-        }
-
-        &:nth-last-child(-n + 2) {
-            margin-bottom: 0;
-        }
     }
 
     @media screen and (min-width: $desktop) {
         width: calc((100% - 120px) / 4);
-        margin-bottom: 0;
-
-        &:not(:last-child) {
-            margin-right: 30px;
-        }
     }
 }
 

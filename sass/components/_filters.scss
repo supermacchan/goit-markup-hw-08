@@ -1,18 +1,9 @@
 .filters {
-    @extend %section;
-
-    @media screen and (min-width: $tablet) {
-        padding-top: 66px;
-    }
-
-    @media screen and (min-width: $desktop) {
-        padding-top: 94px;
-        padding-bottom: 94px;
-    }
-}
-
-.filters__container {
     @extend %container;
+
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+        max-width: $tablet;
+    }
 }
 
 .filters__title {

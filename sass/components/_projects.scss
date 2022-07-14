@@ -1,21 +1,44 @@
 .projects {
-    @extend %list;
-    margin: 0;
-    padding: 0;
+    @extend %section;
 
     @media screen and (min-width: $tablet) {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
+        padding-top: 66px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+}
+
+.projects__container {
+    @extend %container;
+    margin: 0 auto;
+    
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+        max-width: $tablet;
+    }
+}
+
+.projects__list {
+    @extend %list;
+    display: flex;
+    flex-wrap: wrap;
+    
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+
+    @media screen and (max-width: 767px) {
+        justify-content: center;
     }
 }
 
 .projects__item {
-    margin-bottom: 30px;
+    max-width: 450px;
     
     @media screen and (min-width: $tablet) {
         width: calc((100% - 30px) / 2);
-        margin-bottom: 0;
     }
 
     @media screen and (min-width: $desktop) {
@@ -39,7 +62,7 @@
     }
 }
 
-.projects__container {
+.projects__box {
     position: relative;
     overflow: hidden;
 
