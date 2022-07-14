@@ -37,6 +37,11 @@
 .body.modal-open {
   overflow: hidden;
 }
+@media screen and (max-width: 767px) {
+  .body {
+    padding-top: 60px;
+  }
+}
 
 .logo {
   font-family: "Raleway", sans-serif;
@@ -85,6 +90,11 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  .header__container {
+    height: 60px;
+  }
 }
 
 .header__logo {
@@ -1146,13 +1156,34 @@
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
+  max-width: 450px;
+  width: 100%;
   padding: 40px;
   background: #FFFFFF;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+@media screen and (max-height: 610px) and (orientation: landscape) {
+  .modal {
+    top: 70%;
+  }
+}
+@media screen and (max-height: 450px) and (orientation: landscape) {
+  .modal {
+    top: 85%;
+  }
+}
+@media screen and (max-height: 360px) and (orientation: landscape) {
+  .modal {
+    top: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+    height: 581px;
+  }
 }
 
 .modal__close-button {
@@ -1356,15 +1387,22 @@
 
 .policy__agreement {
   position: relative;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   color: var(--main-text-color);
-  margin-left: 8px;
+  margin-left: auto;
+}
+@media screen and (min-width: 1200px) {
+  .policy__agreement {
+    font-size: 14px;
+    line-height: 1.71;
+    padding-right: 11px;
+  }
 }
 
 .policy__checkbox--empty {
   position: absolute;
-  top: 5px;
+  top: 0;
   left: -24px;
   visibility: visible;
   opacity: 1;
@@ -1384,10 +1422,15 @@
   opacity: 0;
   visibility: hidden;
 }
+@media screen and (min-width: 1200px) {
+  .policy__checkbox--empty {
+    top: 4px;
+  }
+}
 
 .policy__checkbox--filled {
   position: absolute;
-  top: 5px;
+  top: 0;
   left: -24px;
   fill: #2196F3;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -1400,6 +1443,11 @@
 .policy__check:checked ~ .policy__agreement > .policy__checkbox--filled {
   visibility: visible;
   opacity: 1;
+}
+@media screen and (min-width: 1200px) {
+  .policy__checkbox--filled {
+    top: 4px;
+  }
 }
 
 .policy__link {

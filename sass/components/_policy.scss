@@ -24,17 +24,24 @@
 .policy__agreement {
     position: relative;
 
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.17;
     color: var(--main-text-color);
 
-    margin-left: 8px;
+    margin-left: auto;
+
+    @media screen and (min-width: $desktop) {
+        font-size: 14px;
+        line-height: 1.71;
+        padding-right: 11px;
+    }
 }
 
 .policy__checkbox--empty {
     position: absolute;
-    top: 5px;
+    top: 0;
     left: -24px;
+    //По макету 8 отступ плюс 16px ширины самой svg
 
     visibility: visible;
     opacity: 1;
@@ -58,11 +65,15 @@
         opacity: 0;
         visibility: hidden;
     }
+
+    @media screen and (min-width: $desktop) {
+        top: 4px;
+    }
 }
 
 .policy__checkbox--filled {
     position: absolute;
-    top: 5px;
+    top: 0;
     left: -24px;
 
     fill: $main-active-color;
@@ -77,6 +88,10 @@
     .policy__check:checked~.policy__agreement>& {
         visibility: visible;
         opacity: 1;
+    }
+
+    @media screen and (min-width: $desktop) {
+        top: 4px;
     }
 }
 
