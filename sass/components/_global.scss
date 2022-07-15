@@ -17,4 +17,8 @@
     @media screen and (max-width: 767px) {
         padding-top: 60px;
     }
+
+    &.no-scroll {
+        overflow: hidden;
+    }
 }
